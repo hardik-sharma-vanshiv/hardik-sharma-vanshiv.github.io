@@ -2,7 +2,7 @@ import FadeIn from './FadeIn';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#111111] text-white pt-20 pb-10 w-full relative overflow-hidden">
+    <footer id="contact" className="bg-[#111111] text-white pt-20 pb-10 w-full relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-16 mb-20">
           <FadeIn direction="up" delay={100} className="flex-1">
@@ -42,7 +42,7 @@ export default function Footer() {
           </FadeIn>
 
           <FadeIn direction="up" delay={200} className="flex-1 bg-[#1A1A1A] rounded-xl p-8 border border-white/5 relative">
-             <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 blur-[50px] rounded-full"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 blur-[50px] rounded-full"></div>
             <form className="space-y-6 relative z-10">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
@@ -76,44 +76,56 @@ export default function Footer() {
         </div>
 
         <FadeIn direction="up" delay={300} className="pt-10 border-t border-gray-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-           <div className="flex items-center gap-2 mb-4 md:mb-0">
-             <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M16 2L2 10V22L16 30L30 22V10L16 2Z" fill="#A855F7" />
-               <path d="M16 8L8 12.5V19.5L16 24L24 19.5V12.5L16 8Z" fill="#F97316" />
-             </svg>
-             <span className="font-bold text-lg tracking-tight">vanshiv</span>
-           </div>
-           
-           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16 w-full md:w-auto">
-             <div>
-               <h5 className="text-white text-xs font-bold mb-4 uppercase">India</h5>
-               <p className="text-gray-500 text-[10px] leading-relaxed">
-                 Vanshiv Technologies Pvt Ltd.<br/>
-                 Plot No 20, IT Park, Phase 1<br/>
-                 Chandigarh, India
-               </p>
-             </div>
-             <div>
-               <h5 className="text-white text-xs font-bold mb-4 uppercase">Australia</h5>
-               <p className="text-gray-500 text-[10px] leading-relaxed">
-                 Vanshiv Pty Ltd<br/>
-                 100 Sydney St<br/>
-                 Sydney, NSW 2000
-               </p>
-             </div>
-             <div>
-               <h5 className="text-white text-xs font-bold mb-4 uppercase">USA</h5>
-               <p className="text-gray-500 text-[10px] leading-relaxed">
-                 Vanshiv Inc<br/>
-                 123 Digital Way<br/>
-                 San Francisco, CA 94105
-               </p>
-             </div>
-           </div>
-           
+          <div className="flex items-center gap-2 mb-4 md:mb-0">
+            <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 2L2 10V22L16 30L30 22V10L16 2Z" fill="#A855F7" />
+              <path d="M16 8L8 12.5V19.5L16 24L24 19.5V12.5L16 8Z" fill="#F97316" />
+            </svg>
+            <span className="font-bold text-lg tracking-tight">vanshiv</span>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16 w-full md:w-auto">
+            <div>
+              <h5 className="text-white text-xs font-bold mb-4 uppercase">India</h5>
+              <p className="text-gray-500 text-[10px] leading-relaxed">
+                Vanshiv Technologies Pvt Ltd.<br />
+                Plot No 20, IT Park, Phase 1<br />
+                Chandigarh, India
+              </p>
+            </div>
+            <div>
+              <h5 className="text-white text-xs font-bold mb-4 uppercase">Australia</h5>
+              <p className="text-gray-500 text-[10px] leading-relaxed">
+                Vanshiv Pty Ltd<br />
+                100 Sydney St<br />
+                Sydney, NSW 2000
+              </p>
+            </div>
+            <div>
+              <h5 className="text-white text-xs font-bold mb-4 uppercase">USA</h5>
+              <p className="text-gray-500 text-[10px] leading-relaxed">
+                Vanshiv Inc<br />
+                123 Digital Way<br />
+                San Francisco, CA 94105
+              </p>
+            </div>
+          </div>
+
         </FadeIn>
-        <FadeIn direction="up" delay={400} className="mt-10 text-center md:text-left text-gray-600 text-[10px]">
-           © {new Date().getFullYear()} Vanshiv. All rights reserved.
+        <FadeIn direction="up" delay={400} className="mt-10 pt-6 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4 text-gray-500 text-xs">
+          <p>© {new Date().getFullYear()} Vanshiv. All rights reserved.</p>
+          <div className="flex gap-6">
+            <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="/terms-and-conditions" className="hover:text-white transition-colors">Terms & Conditions</a>
+          </div>
+          <div className="flex gap-4">
+            <a href="#" aria-label="LinkedIn" className="hover:text-white transition-colors">
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+            </a>
+            <a href="#" aria-label="Twitter" className="hover:text-white transition-colors">
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+            </a>
+          </div>
         </FadeIn>
       </div>
     </footer>

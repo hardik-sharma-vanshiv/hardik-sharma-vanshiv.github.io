@@ -24,7 +24,7 @@ export default function DigitalLifecycle() {
           <p className="text-gray-500 mb-8 leading-relaxed max-w-sm text-sm">
             From initial discovery to post-launch optimization, our frameworks ensure you continually innovate and evolve.
           </p>
-          <button className="bg-[#A855F7] hover:bg-[#9333EA] text-white px-8 py-3 rounded text-sm font-semibold transition-colors shadow-lg shadow-purple-500/30">
+          <button className="bg-[#A855F7] hover:bg-[#9333EA] text-white px-8 py-3 rounded-lg text-sm font-semibold transition-colors shadow-lg shadow-purple-500/30">
             Learn Our Process
           </button>
         </FadeIn>
