@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import AboutSection from '@/components/AboutSection';
 import Footer from '@/components/Footer';
+import Leadership from '@/components/Leadership';
 
 export const metadata = {
   title: 'About Us | Vanshiv',
@@ -22,6 +23,7 @@ export default function AboutPage() {
           </div>
         </section>
         <AboutSection />
+        <Leadership />
       </main>
       <Footer />
     </div>
