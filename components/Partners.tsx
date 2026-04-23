@@ -4,11 +4,19 @@ import Marquee from "react-fast-marquee";
 
 export default function Partners() {
   const partners = [
-    { name: 'TRANTOR', src: '/images/client1.png' },
-    { name: 'CPTfly', src: '/images/client6.png' },
-    { name: 'digitsec', src: '/images/client5.png' },
-    { name: 'Salesforce', src: '/images/client8.png' },
-    { name: 'TRANTOR 2', src: '/images/client9.png' },
+    { name: 'TRANTOR', src: '/images/partner1.png' },
+    { name: 'CPTfly', src: '/images/partner2.png' },
+    { name: 'digitsec', src: '/images/partner3.png' },
+    { name: 'Salesforce', src: '/images/partner4.png' },
+    { name: 'TRANTOR 2', src: '/images/partner5.png' },
+    { name: 'TRANTOR', src: '/images/partner6.png' },
+    { name: 'CPTfly', src: '/images/partner7.png' },
+    { name: 'digitsec', src: '/images/partner8.png' },
+    { name: 'Salesforce', src: '/images/partner9.png' },
+    { name: 'TRANTOR 2', src: '/images/partner10.png' },
+    { name: 'TRANTOR', src: '/images/partner11.png' },
+    { name: 'CPTfly', src: '/images/partner12.png' },
+    { name: 'digitsec', src: '/images/partner13.png' },
   ];
 
   return (
@@ -16,7 +24,7 @@ export default function Partners() {
       <div className="max-w-6xl mx-auto px-4">
         <FadeIn delay={100} direction="up">
           <h2 className="text-center text-sm tracking-[0.1em] text-gray-500 font-semibold uppercase mb-10">
-            Our Customers & Partners
+            Our Partners
           </h2>
         </FadeIn>
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
