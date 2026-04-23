@@ -1,4 +1,11 @@
 import React from 'react';
+import FadeIn from './FadeIn';
+import { Space_Grotesk } from "next/font/google";
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
 
 export default function Leadership() {
   const leaders = [
@@ -55,39 +62,42 @@ export default function Leadership() {
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-14">
+        <FadeIn delay={100} direction="up" className="text-center mb-14">
           <p className="text-purple-600 text-sm font-semibold uppercase tracking-widest mb-3">The team</p>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Leadership Lens</h2>
+          <h2 className={`${spaceGrotesk.className} text-5xl text-center font-bold text-gray-900 mb-4`}>Leadership Lens</h2>
           <p className="text-gray-500 max-w-xl mx-auto">Visionary leaders with deep experience across AI, cloud, Salesforce, and enterprise technology transformation.</p>
-        </div>
+        </FadeIn>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {leaders.map((leader, idx) => (
-            <div key={idx} className="bg-white rounded-2xl overflow-hidden border border-gray-300 transition-shadow group flex flex-col h-full">
-              <div className="h-64 relative overflow-hidden bg-[#DBE4ED] shrink-0">
-                <img
-                  src={leader.image}
-                  alt={leader.name}
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              <div className="p-5 flex flex-col flex-1 justify-between">
-                <div>
-                  <h3 className="text-gray-900 font-bold text-lg leading-tight flex flex-row items-center gap-2">
-                    {leader.name}
-                    <a href={leader.linkedin} target="_blank" rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs text-blue-600 font-medium hover:text-blue-800 transition-colors w-max">
-                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
-                    </a>
-                  </h3>
-                  <p className="text-gray-500 text-xs font-semibold mt-1.5">{leader.role}</p>
+          {leaders.map((leader, idx) => {
+            return (
+              <FadeIn key={idx} delay={idx * 100} direction="up" className="h-full">
+                <div className="bg-white rounded-2xl overflow-hidden border border-gray-300 transition-shadow group flex flex-col h-full">
+                  <div className="h-64 relative overflow-hidden bg-[#DBE4ED] shrink-0">
+                    <img
+                      src={leader.image}
+                      alt={leader.name}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  <div className="p-5 flex flex-col flex-1 justify-between">
+                    <div>
+                      <h3 className="text-gray-900 font-bold text-lg leading-tight flex flex-row items-center gap-2">
+                        {leader.name}
+                        <a href={leader.linkedin} target="_blank" rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs text-blue-600 font-medium hover:text-blue-800 transition-colors w-max">
+                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
+                        </a>
+                      </h3>
+                      <p className="text-gray-500 text-xs font-semibold mt-1.5">{leader.role}</p>
+                    </div>
+                  </div>
                 </div>
-
-              </div>
-            </div>
-          ))}
+              </FadeIn>
+            )
+          })}
         </div>
       </div>
-    </section>
+    </section >
   );
 }

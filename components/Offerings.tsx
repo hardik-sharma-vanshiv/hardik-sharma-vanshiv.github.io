@@ -9,35 +9,25 @@ const spaceGrotesk = Space_Grotesk({
 export default function Offerings() {
   const cards = [
     {
-      title: 'Salesforce Implementation',
-      desc: 'Seamless deployment of CRM solutions, customized to align with your unique business workflow and maximize performance.',
+      title: 'Salesforce Implementation & Consulting',
+      desc: 'Seamless deployment, customization, and optimization of Salesforce CRM solutions tailored to streamline your business workflows and maximize ROI.',
       colSpan: 'col-span-1 md:col-span-2'
     },
     {
-      title: 'MuleSoft Development',
-      desc: 'Unlock seamless data flow and process automation with scalable API architectures that modernize your infrastructure at a fraction of the cost.',
+      title: 'MuleSoft Integration & Development',
+      desc: 'Unlock seamless data flow and process automation with scalable API-led connectivity, modernizing your enterprise infrastructure securely.',
       colSpan: 'col-span-1 md:col-span-1'
     },
     {
-      title: 'Advisory Services',
-      desc: 'Strategic consultation and roadmap creation to align technology initiatives with overarching business goals.',
+      title: 'Digital Strategy & Advisory Services',
+      desc: 'Strategic IT consultation, cloud readiness assessments, and roadmap creation to align your complex technology initiatives with overarching business goals.',
       colSpan: 'col-span-1 md:col-span-1'
     },
     {
-      title: 'Salesforce Implementation',
-      desc: 'Seamless deployment of CRM solutions, customized to align with your unique business workflow and maximize performance.',
+      title: 'Legacy System Modernization',
+      desc: 'Translating outdated, siloed architectures into agile, cloud-native infrastructures that reduce technical debt and lower operational costs.',
       colSpan: 'col-span-1 md:col-span-2'
-    },
-    {
-      title: 'MuleSoft Development',
-      desc: 'Unlock seamless data flow and process automation with scalable API architectures that modernize your infrastructure at a fraction of the cost.',
-      colSpan: 'col-span-1 md:col-span-2'
-    },
-    {
-      title: 'Advisory Services',
-      desc: 'Strategic consultation and roadmap creation to align technology initiatives with overarching business goals.',
-      colSpan: 'col-span-1 md:col-span-1'
-    },
+    }
   ];
 
   return (
@@ -45,10 +35,10 @@ export default function Offerings() {
       <div className="max-w-6xl mx-auto px-4">
         <FadeIn delay={100} direction="up">
           <p className="text-[#A855F7] text-sm font-bold tracking-widest uppercase mb-4">
-            OUR SERVICES
+            OUR CORE EXPERTISE
           </p>
           <h2 className={`${spaceGrotesk.className} text-3xl md:text-3xl font-extrabold text-gray-900 mb-12`}>
-            Advanced Technology Offerings
+            Advanced Multi-Cloud Technology Solutions
           </h2>
         </FadeIn>
 

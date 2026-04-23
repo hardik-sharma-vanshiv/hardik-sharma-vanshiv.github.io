@@ -9,20 +9,20 @@ const spaceGrotesk = Space_Grotesk({
 export default function AboutSection() {
   return (
     <section className="py-20 bg-white w-full">
-      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-16 items-center">
         <FadeIn delay={100} direction="right" className="flex-1">
           <p className="text-[#A855F7] text-sm font-extrabold tracking-widest uppercase mb-4">
-            ABOUT VANSHIV
+            ABOUT VANSHIV CONSULTING
           </p>
           <h2 className={`${spaceGrotesk.className} text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6`}>
-            Your Trusted <br /> Implementation <br /> Partner.
+            Your Strategic <br /> Partner for Multi-Cloud <br /> & Digital Transformation.
           </h2>
           <div className="space-y-4 text-gray-600 text-sm md:text-base leading-relaxed mb-10 pr-4">
             <p>
-              We stand distinct in a digital arena saturated with systemic complexities and mundane implementation approaches. As a strategic technical advisory, we prioritize architectural integrity over generic solutions.
+              We stand distinct in a digital arena saturated with systemic complexities. As a strategic technical advisory firm, we prioritize scalable architectural integrity over generic fixes, specializing in enterprise-grade CRM and Integration solutions.
             </p>
             <p>
-              Our methodology combines entrepreneurial architectural vision with technical implementation prowess. This dual-focus ensures that our deployments are built for scale and future agility.
+              Our methodology merges entrepreneurial vision with technical prowess. Whether it&apos;s Salesforce customization or MuleSoft API architecture, our deployments are built for high performance, agility, and long-term scalability.
             </p>
           </div>
         </FadeIn>

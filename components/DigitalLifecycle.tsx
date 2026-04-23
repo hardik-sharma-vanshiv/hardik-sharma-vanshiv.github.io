@@ -8,10 +8,10 @@ const spaceGrotesk = Space_Grotesk({
 
 export default function DigitalLifecycle() {
   const steps = [
-    { num: '01', title: 'Legacy Modernization', desc: 'Translating outdated architectures into agile, cloud-native infrastructures.' },
-    { num: '02', title: 'Experience Design', desc: 'Crafting user-centric digital products that command engagement.' },
-    { num: '03', title: 'Managed Services', desc: 'Continuous iteration and proactive support for sustained velocity.' },
-    { num: '04', title: 'Data Intelligence', desc: 'Architecting scalable frameworks for complex data orchestration.' },
+    { num: '01', title: 'Cloud Architecture & Design', desc: 'Translating business requirements into scalable, secure, and agile cloud-native infrastructures.' },
+    { num: '02', title: 'Experience & Solution Design', desc: 'Crafting user-centric digital products and CRM interfaces that command engagement and drive user adoption.' },
+    { num: '03', title: 'Deployment & Integration', desc: 'Seamlessly integrating complex systems via automated pipelines for unified data visibility.' },
+    { num: '04', title: 'Managed Services & Analytics', desc: 'Continuous iteration, proactive support, and actionable data intelligence for sustained velocity.' },
   ];
 
   return (
@@ -19,10 +19,10 @@ export default function DigitalLifecycle() {
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-16 md:items-center">
         <FadeIn direction="left" className="flex-1 md:pr-12">
           <h2 className={`${spaceGrotesk.className} text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6`}>
-            Mastering The Digital<br />Lifecycle
+            Mastering the End-to-End Digital Transformation Lifecycle
           </h2>
           <p className="text-gray-500 mb-8 leading-relaxed max-w-sm text-sm">
-            From initial discovery to post-launch optimization, our frameworks ensure you continually innovate and evolve.
+            From initial discovery to post-launch optimization, our frameworks ensure your enterprise continually innovates and evolves.
           </p>
           <button className="bg-[#A855F7] hover:bg-[#9333EA] text-white px-8 py-3 rounded-lg text-sm font-semibold transition-colors shadow-lg shadow-purple-500/30">
             Learn Our Process

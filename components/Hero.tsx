@@ -15,7 +15,7 @@ export default function Hero() {
           THE DIGITAL ARCHITECT
         </p> */}
         <h1
-          className={`${spaceGrotesk.className} flex flex-col items-center text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight drop-shadow-lg`}
+          className={`${spaceGrotesk.className} flex flex-col items-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight drop-shadow-lg`}
         >
           <div className="flex flex-col items-center text-center">
             REIMAGINE THE FUTURE
@@ -37,8 +37,7 @@ export default function Hero() {
           </div>
         </h1>
         <p className="text-center text-xs md:text-base font-normal text-gray-100 max-w-2xl leading-relaxed mt-2">
-          Driving digital transformation with complete Salesforce and MuleSoft
-          solutions. We build the architecture that powers tomorrow&apos;s industry leaders.
+          Driving enterprise digital transformation as your premier Salesforce and MuleSoft Implementation Partner. We design scalable, multi-cloud architectures that power tomorrow&apos;s industry leaders across the US, Australia, and India.
         </p>
       </FadeIn>
     </section>

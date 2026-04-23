@@ -24,3 +24,71 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.section-dark {
+  background-color: #4f3144;
+  background-image:
+    radial-gradient(circle at 15% 55%, rgba(255, 134, 59, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 85% 15%, rgba(255, 92, 169, 0.10) 0%, transparent 40%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='1' cy='1' r='1' fill='rgba(255,255,255,0.04)'/%3E%3C/svg%3E");
+}
+
+.section-dark-deeper {
+  background-color: #3b2535;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='1' cy='1' r='1' fill='rgba(255,255,255,0.04)'/%3E%3C/svg%3E");
+}
+
+.hero-bg {
+  background-color: #4f3144;
+  background-image:
+    radial-gradient(circle at 10% 60%, rgba(255, 134, 59, 0.18) 0%, transparent 50%),
+    radial-gradient(circle at 90% 10%, rgba(255, 49, 43, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 60% 90%, rgba(255, 92, 169, 0.10) 0%, transparent 40%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='1' cy='1' r='1' fill='rgba(255,255,255,0.05)'/%3E%3C/svg%3E");
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, rgb(255, 49, 43) 0%, rgb(255, 134, 59) 30%, rgb(255, 219, 74) 60%, rgb(255, 92, 169) 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.value-card {
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 32px 28px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.job-card {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 16px;
+  padding: 28px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  border-color: #ff5542;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.6s cubic-bezier(.22, 1, .36, 1) both;
+}

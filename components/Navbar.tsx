@@ -70,7 +70,7 @@ export default function Navbar() {
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                 </button>
                 <div className="absolute top-full left-0 mt-0 w-60 bg-white shadow-xl border border-gray-100 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 flex flex-col overflow-hidden">
-                  <a href="#" className="px-4 py-3 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors">Current openings</a>
+                  <a href="/careers" className="px-4 py-3 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors">Current openings</a>
                   <a href="#" className="px-4 py-3 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors border-t border-gray-100">Career Accelerator program</a>
                 </div>
               </div>
@@ -90,7 +90,7 @@ export default function Navbar() {
       </div>
 
       <div className="hidden md:flex items-center">
-        <a href="#contact" className="px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm font-bold rounded-lg transition-colors shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+        <a href="#contact" className={`${isScrolledPastHero ? 'bg-black' : 'bg-white'} ${isScrolledPastHero ? 'text-white' : 'text-black'} px-6 py-2  hover:bg-white text-black text-sm font-bold rounded-lg transition-colors`}>
           Contact Us
         </a>
       </div>

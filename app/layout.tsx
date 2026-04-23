@@ -4,11 +4,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Vanshiv - The Digital Architect",
+    default: "Vanshiv | Multi-Cloud Experts, Salesforce & MuleSoft Partners",
     template: "%s | Vanshiv",
   },
-  description: "Driving digital transformation with complete Salesforce and MuleSoft solutions. Global leader in cloud strategy, implementation, and integration.",
-  keywords: ["Vanshiv", "Digital Transformation", "Salesforce", "MuleSoft", "Cloud Solutions", "IT Consultant", "Digital Architecture", "CRM"],
+  description: "Vanshiv offers premium digital transformation consulting, specializing in scalable Salesforce implementations, MuleSoft development, and multi-cloud architecture.",
+  keywords: ["Vanshiv", "Salesforce Implementation Partner", "MuleSoft Development Services", "Multi-Cloud Experts", "Digital Transformation Consulting", "Cloud Architecture Solutions", "CRM"],
   authors: [{ name: "Vanshiv Technologies" }],
   creator: "Vanshiv",
   publisher: "Vanshiv",
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.vanshiv.com/",
-    title: "Vanshiv - The Digital Architect",
-    description: "Driving digital transformation with complete Salesforce and MuleSoft solutions.",
+    title: "Vanshiv | Multi-Cloud Experts, Salesforce & MuleSoft Partners",
+    description: "Vanshiv offers premium digital transformation consulting, specializing in scalable Salesforce implementations, MuleSoft development, and multi-cloud architecture.",
     siteName: "Vanshiv",
     images: [
       {
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vanshiv - The Digital Architect",
-    description: "Driving digital transformation with complete Salesforce and MuleSoft solutions.",
+    title: "Vanshiv | Multi-Cloud Experts, Salesforce & MuleSoft Partners",
+    description: "Vanshiv offers premium digital transformation consulting, specializing in scalable Salesforce implementations, MuleSoft development, and multi-cloud architecture.",
     images: ["/images/og-image.jpg"],
   },
   robots: {
