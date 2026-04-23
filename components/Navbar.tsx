@@ -18,7 +18,7 @@ export default function Navbar() {
     { name: 'About', href: '/about', active: pathname === '/about' },
     { name: 'Customer & Partners', href: '#' },
     { name: 'Offerings', href: '#' },
-    { name: 'Careers', href: '#' },
+    { name: 'Careers', href: '/careers', active: pathname === '/careers' },
     { name: 'Blog', href: '#' },
   ];
 
@@ -64,7 +64,7 @@ export default function Navbar() {
             return (
               <div key={link.name} className="relative group py-2">
                 <button
-                  className={`flex items-center gap-1 text-sm font-medium transition-all hover:font-bold ${isScrolledPastHero ? 'text-gray-600' : 'text-white'}`}
+                  className={`relative flex items-center gap-1 text-sm font-medium transition-all ${isScrolledPastHero ? 'text-gray-600' : 'text-white'} after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:-bottom-1 after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left`}
                 >
                   {link.name}
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
@@ -80,8 +80,8 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className={`text-sm font-medium transition-all hover:font-semibold ${isScrolledPastHero ? (link.active ? 'text-gray-900' : 'text-gray-600') : 'text-white'
-                } ${link.active ? 'underline underline-offset-4 decoration-2' : ''}`}
+              className={`relative text-sm font-medium transition-all ${isScrolledPastHero ? (link.active ? 'text-gray-900' : 'text-gray-600') : 'text-white'
+                } ${link.active ? 'after:scale-x-100 after:origin-bottom-left' : 'after:scale-x-0'} after:content-[''] after:absolute after:w-full after:h-[2px] after:-bottom-1 after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left`}
             >
               {link.name}
             </a>
