@@ -4,14 +4,8 @@ import { JobModal } from '@/components/JobModal';
 import Navbar from '@/components/Navbar';
 import { Button } from '@/components/ui/button';
 import { ChevronRight } from 'lucide-react';
-import { Space_Grotesk } from "next/font/google";
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
 
 interface Job {
   jobId: string;
@@ -123,7 +117,7 @@ export default function Careers() {
       {/* HERO */}
       <section className="bg-[url('/images/hiringBg.avif')] bg-cover bg-center pt-16 min-h-screen flex items-end">
         <div className="max-w-7xl mx-auto px-6 py-24 text-center mt-10">
-          <h1 className={`text-5xl sm:text-6xl font-extrabold text-white leading-tight mb-6 fade-up ${spaceGrotesk.className}`} style={{ animationDelay: '0.2s' }}>
+          <h1 className={`text-5xl sm:text-6xl font-extrabold text-white leading-tight mb-6 fade-up font-primary`} style={{ animationDelay: '0.2s' }}>
             Join Our<br className="hidden sm:block" />
             Growing Team
           </h1>
@@ -147,7 +141,7 @@ export default function Careers() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <p className="text-black text-sm font-semibold uppercase tracking-wider mb-3">Our Culture</p>
-            <h2 className={`${spaceGrotesk.className} text-4xl lg:text-5xl font-bold text-black leading-tight`}>What we stand for</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-black leading-tight">What we stand for</h2>
             <p className="text-black/40 text-lg mt-4 max-w-xl mx-auto">Our values guide how we work, collaborate, and grow together.</p>
           </div>
 
@@ -196,7 +190,7 @@ export default function Careers() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <p className="text-[#ff5542] text-sm font-semibold uppercase tracking-wider mb-3">Open Positions</p>
-            <h2 className={`text-4xl lg:text-5xl font-bold text-[#26282b] leading-tight ${spaceGrotesk.className}`}>Find your next role</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-[#26282b] leading-tight">Find your next role</h2>
             <p className="text-gray-500 text-lg mt-4 max-w-xl mx-auto">Join a team building the future of applied AI and enterprise transformation.</p>
           </div>
 
@@ -279,7 +273,7 @@ export default function Careers() {
       {/* CTA BAND */}
       <section className="section bg-[url('/images/aboutBg.jpg')] bg-cover bg-center py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className={`${spaceGrotesk.className} text-3xl lg:text-4xl font-bold text-white mb-4`}>Don't see the right role?</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Don&apos;t see the right role?</h2>
           <p className="text-white/90 text-lg mb-8">We're always looking for exceptional people. Send us your resume and we'll reach out when the right opportunity opens up.</p>
           <Link href="/#contact" className="inline-flex items-center gap-2 bg-white text-black px-6 py-2 rounded-xl font-semibold transition-colors text-md">
             Send your resume

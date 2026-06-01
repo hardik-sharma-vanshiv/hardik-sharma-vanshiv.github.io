@@ -1,11 +1,11 @@
-import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import Affiliations from '@/components/Affiliations';
-import Partners from '@/components/Partners';
 import AboutSection from '@/components/AboutSection';
-import Offerings from '@/components/Offerings';
 import DigitalLifecycle from '@/components/DigitalLifecycle';
 import Footer from '@/components/Footer';
+import Hero from '@/components/Hero';
+import Navbar from '@/components/Navbar';
+import Offerings from '@/components/Offerings';
+import Partners from '@/components/Partners';
+import { SalesforceSection } from '@/components/SalesforceSection';
 
 export default function Home() {
   return (
@@ -13,10 +13,11 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Affiliations />
         <Partners />
+        {/* <Affiliations /> */}
         <AboutSection />
         <Offerings />
+        <SalesforceSection />
         <DigitalLifecycle />
       </main>
       <Footer />

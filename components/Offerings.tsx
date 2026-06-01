@@ -1,10 +1,4 @@
 import FadeIn from './FadeIn';
-import { Space_Grotesk } from "next/font/google";
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-})
 
 export default function Offerings() {
   const cards = [
@@ -32,12 +26,12 @@ export default function Offerings() {
 
   return (
     <section className="py-20 bg-[#FAFAFA] w-full">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4">
         <FadeIn delay={100} direction="up">
           <p className="text-[#A855F7] text-sm font-bold tracking-widest uppercase mb-4">
             OUR CORE EXPERTISE
           </p>
-          <h2 className={`${spaceGrotesk.className} text-3xl md:text-3xl font-extrabold text-gray-900 mb-12`}>
+          <h2 className="text-3xl md:text-3xl font-extrabold text-gray-900 mb-12">
             Advanced Multi-Cloud Technology Solutions
           </h2>
         </FadeIn>
@@ -46,7 +40,7 @@ export default function Offerings() {
           {cards.map((card, idx) => (
             <FadeIn key={idx} delay={idx * 100} direction="up" className={card.colSpan}>
               <div
-                className={`bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full`}
+                className={`bg-white rounded-xl p-8 border border-black/10 transition-shadow flex flex-col h-full`}
               >
                 <div className="w-10 h-10 rounded-lg bg-[#0B1229] flex items-center justify-center mb-6 text-white shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

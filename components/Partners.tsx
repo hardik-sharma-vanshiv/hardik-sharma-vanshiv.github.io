@@ -20,17 +20,15 @@ export default function Partners() {
   ];
 
   return (
-    <section className="py-8 bg-white w-full">
-      <div className="max-w-6xl mx-auto px-4">
-        <FadeIn delay={100} direction="up">
-          <h2 className="text-center text-sm tracking-[0.1em] text-gray-500 font-semibold uppercase mb-10">
-            Our Partners
+    <section className="py-16 w-full bg-black">
+      <div className="w-full mx-auto px-4">
+        <FadeIn delay={100} direction="up"> 
+          <h2 className="text-center text-sm tracking-[0.1em] text-white mb-10">
+          Partnering with Companies That Drive Innovation
           </h2>
         </FadeIn>
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-          <Marquee
-            gradient
-          >
+          <Marquee>
             {partners.map((partner, idx) => (
               <img src={partner.src} alt={partner.name} className="w-auto h-10 font-bold text-lg tracking-tight text-gray-700 ml-20" />
             ))}

@@ -16,8 +16,9 @@ export default function Navbar() {
   const links = [
     { name: 'Home', href: '/', active: pathname === '/' },
     { name: 'About', href: '/about', active: pathname === '/about' },
-    { name: 'Customer & Partners', href: '#' },
-    { name: 'Offerings', href: '#' },
+    // { name: 'Customer & Partners', href: '#' },
+    // { name: 'Offerings', href: '#' },
+    { name: 'Accelerator', href: '#' },
     { name: 'Careers', href: '/careers', active: pathname === '/careers' },
     { name: 'Blog', href: '#' },
   ];
@@ -60,6 +61,25 @@ export default function Navbar() {
 
       <div className="hidden md:flex items-center gap-6">
         {links.map((link) => {
+          if (link.name === 'Accelerator') {
+            return (
+              <div key={link.name} className="relative group py-2">
+                <button
+                  className={`relative flex items-center gap-1 text-sm font-medium transition-all ${isScrolledPastHero ? 'text-gray-600' : 'text-white'} after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:-bottom-1 after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left`}
+                >
+                  {link.name}
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                </button>
+                <div className="absolute top-full left-0 mt-0 w-60 bg-white shadow-xl border border-gray-100 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 flex flex-col overflow-hidden">
+                  <a href="https://www.paygentforce.com/" target="_blank" rel="noopener noreferrer" className="px-4 py-3 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors">Paygentforce</a>
+                  <div className="px-4 py-3 text-sm text-gray-400 border-t border-gray-100 flex justify-between items-center bg-gray-50/50">
+                    PayforGood
+                    <span className="text-[10px] bg-gray-200 text-gray-500 px-1.5 py-0.5 rounded">Coming Soon</span>
+                  </div>
+                </div>
+              </div>
+            );
+          }
           if (link.name === 'Careers') {
             return (
               <div key={link.name} className="relative group py-2">
@@ -110,6 +130,20 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div className="absolute top-20 left-0 w-full bg-white shadow-xl border-t border-gray-100 flex flex-col md:hidden py-4 px-6 gap-4 z-50">
           {links.map((link) => {
+            if (link.name === 'Accelerator') {
+              return (
+                <div key={link.name} className="flex flex-col gap-3">
+                  <span className={`text-base font-medium text-gray-800`}>{link.name}</span>
+                  <div className="flex flex-col gap-3 pl-4 border-l-2 border-purple-100">
+                    <a href="https://www.paygentforce.com/" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-600 hover:text-purple-600" onClick={() => setIsMobileMenuOpen(false)}>Paygentforce</a>
+                    <div className="text-sm text-gray-400 flex justify-between items-center pr-4">
+                      PayforGood
+                      <span className="text-[10px] bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded">Coming Soon</span>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
             if (link.name === 'Careers') {
               return (
                 <div key={link.name} className="flex flex-col gap-3">

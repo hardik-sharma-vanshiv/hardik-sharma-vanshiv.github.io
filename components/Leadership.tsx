@@ -1,11 +1,5 @@
 import React from 'react';
 import FadeIn from './FadeIn';
-import { Space_Grotesk } from "next/font/google";
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
 
 export default function Leadership() {
   const leaders = [
@@ -64,7 +58,7 @@ export default function Leadership() {
       <div className="max-w-7xl mx-auto px-6">
         <FadeIn delay={100} direction="up" className="text-center mb-14">
           <p className="text-purple-600 text-sm font-semibold uppercase tracking-widest mb-3">The team</p>
-          <h2 className={`${spaceGrotesk.className} text-5xl text-center font-bold text-gray-900 mb-4`}>Leadership Lens</h2>
+          <h2 className="text-5xl text-center font-bold text-gray-900 mb-4">Leadership Lens</h2>
           <p className="text-gray-500 max-w-xl mx-auto">Visionary leaders with deep experience across AI, cloud, Salesforce, and enterprise technology transformation.</p>
         </FadeIn>
 
