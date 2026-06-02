@@ -6,9 +6,6 @@ const Circle = forwardRef<
     HTMLDivElement,
     { className?: string; children?: React.ReactNode; name: string; textColor: any }
 >(({ className, children, name, textColor }, ref) => {
-
-    // console.log();
-
     return (
         <div className='flex flex-col items-center justify-center z-20'>
             <div
@@ -35,48 +32,23 @@ const SalesforceProducts = forwardRef<any>(({ imgUrl, imgSize, bgColor, borderCo
 
     return (
         <>
-            {/* <motion.div
-                initial={{
-                    x: initialX,
-                    y: initialY
-                }}
-                animate={{
-                    x: finalX,
-                    y: finalY
-                }}
-                viewport={{ once: false }}
-            > */}
-            <Circle ref={ref} name={serviceName} textColor={textColor} className={`${bgColor} ${borderColor} ${imgSize}`}>
-                <Image
-                    width={800}
-                    height={800}
-                    alt="Card background"
-                    className="mix-blend-multiply"
-                    src={imgUrl}
-                />{" "}
+
+            <Circle
+                ref={ref}
+                name={serviceName}
+                textColor={textColor}
+                className={cn(bgColor, borderColor, imgSize)}
+            >
+                {/* {imgUrl && (
+                    <Image
+                        src={imgUrl}
+                        alt={serviceName ?? "Salesforce"}
+                        width={80}
+                        height={80}
+                        className="h-full w-full object-contain"
+                    />
+                )} */}
             </Circle>
-            {/* </motion.div > */}
-            {/* <TooltipProvider>
-                <Tooltip delayDuration={0}>
-                    <TooltipTrigger>
-                        <Circle ref={ref} name={serviceName} textColor={textColor} className={`${bgColor} ${borderColor} ${imgSize} hover:transform `}>
-                            <Image
-                                width={800}
-                                height={800}
-                                alt="Card background"
-                                className="mix-blend-multiply"
-                                src={imgUrl}
-                            />{" "}
-                        </Circle>
-                    </TooltipTrigger>
-                    <TooltipContent side={side} className={`${bgColor} border-2 ${borderColor} backdrop-filter backdrop-blur-sm bg-opacity-50`}>
-                        <h2 className={`${tooltipTextColor} font-extrabold text-sm uppercase`}>Service Cloud</h2>
-                        <p className="max-w-60 line-clamp-4 text-xs text-gray-500">
-                            Service Cloud enables users to automate service processes, streamline workflows and find key articles, topics and experts to support customer service agents.
-                        </p>
-                    </TooltipContent>
-                </Tooltip>
-            </TooltipProvider> */}
         </>
     );
 });

@@ -77,10 +77,10 @@ export default function Footer() {
 
         <FadeIn direction="up" delay={300} className="pt-10 border-t border-gray-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
           <div className="flex flex-col gap-4 mb-4 md:mb-0">
-            <img src="/images/logo2.png" alt="Vanshiv Logo" className="w-32  h-10" />
+            <img src="/images/logo2.png" alt="Vanshiv Logo" className="w-42" />
             <div className="flex flex-row items-start gap-4">
-              <img src="/images/submitPartner.webp" alt="" className="w-24" />
-              <img src="/images/partner1.png" alt="" className="w-24" />
+              <img src="/images/partner8.png" alt="" className="w-32" />
+              <img src="/images/partner11.png" alt="" className="w-32" />
             </div>
           </div>
 

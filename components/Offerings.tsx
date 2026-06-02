@@ -1,26 +1,31 @@
 import FadeIn from './FadeIn';
+import Image from 'next/image';
 
 export default function Offerings() {
   const cards = [
     {
       title: 'Salesforce Implementation & Consulting',
       desc: 'Seamless deployment, customization, and optimization of Salesforce CRM solutions tailored to streamline your business workflows and maximize ROI.',
-      colSpan: 'col-span-1 md:col-span-2'
+      colSpan: 'col-span-1 md:col-span-2',
+      image: '/images/salesforcelogo.png'
     },
     {
       title: 'MuleSoft Integration & Development',
       desc: 'Unlock seamless data flow and process automation with scalable API-led connectivity, modernizing your enterprise infrastructure securely.',
-      colSpan: 'col-span-1 md:col-span-1'
-    },
-    {
-      title: 'Digital Strategy & Advisory Services',
-      desc: 'Strategic IT consultation, cloud readiness assessments, and roadmap creation to align your complex technology initiatives with overarching business goals.',
-      colSpan: 'col-span-1 md:col-span-1'
+      colSpan: 'col-span-1 md:col-span-1',
+      image: '/images/mulesoft.png'
     },
     {
       title: 'Legacy System Modernization',
       desc: 'Translating outdated, siloed architectures into agile, cloud-native infrastructures that reduce technical debt and lower operational costs.',
-      colSpan: 'col-span-1 md:col-span-2'
+      colSpan: 'col-span-1 md:col-span-1',
+      image: '/images/legacy-system.png'
+    },
+    {
+      title: 'Digital Strategy & Advisory Services',
+      desc: 'Strategic IT consultation, cloud readiness assessments, and roadmap creation to align your complex technology initiatives with overarching business goals.',
+      colSpan: 'col-span-1 md:col-span-2',
+      image: '/images/digital-strategy.png'
     }
   ];
 
@@ -42,10 +47,8 @@ export default function Offerings() {
               <div
                 className={`bg-white rounded-xl p-8 border border-black/10 transition-shadow flex flex-col h-full`}
               >
-                <div className="w-10 h-10 rounded-lg bg-[#0B1229] flex items-center justify-center mb-6 text-white shrink-0">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-6 text-white shrink-0">
+                  <Image src={card.image} alt={card.title} width={100} height={100} />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{card.title}</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">

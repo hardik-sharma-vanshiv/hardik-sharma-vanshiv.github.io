@@ -1,6 +1,7 @@
 import AboutSection from '@/components/AboutSection';
 import DigitalLifecycle from '@/components/DigitalLifecycle';
 import Footer from '@/components/Footer';
+import FullStackAndAISection from '@/components/FullStackAndAISection';
 import Hero from '@/components/Hero';
 import Navbar from '@/components/Navbar';
 import Offerings from '@/components/Offerings';
@@ -18,6 +19,7 @@ export default function Home() {
         <AboutSection />
         <Offerings />
         <SalesforceSection />
+        <FullStackAndAISection />
         <DigitalLifecycle />
       </main>
       <Footer />

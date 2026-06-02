@@ -10,7 +10,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-montserrat), sans-serif;
   --font-primary: var(--font-montserrat), sans-serif;
-  --font-secondary: var(--font-montserrat), sans-serif;
+  --font-secondary: var(--font-barlow), sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {

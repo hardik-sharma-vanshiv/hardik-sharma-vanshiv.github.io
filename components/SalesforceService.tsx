@@ -1,9 +1,11 @@
 "use client";
-import SalesforceProducts from "@/components/SalesforceProducts";
-import { AnimatedBeam } from "@/components/ui/animated-beam";
-import Ripple from "@/components/ui/ripple";
+import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { salesforceServicesData } from "@/data/salesforceServiceData";
+import { AnimatedBeam } from "@/components/ui/animated-beam";
+import SalesforceProducts from "./SalesforceProducts"
+import { salesforceServicesData } from "@/data/salesforceServiceData"
+import Ripple from "@/components/ui/ripple";
+import React from "react";
 
 export function SalesforceService() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -24,11 +26,11 @@ export function SalesforceService() {
 
     return (
         <div
-            className="relative flex h-full w-full max-w-full items-center justify-center px-2 sm:px-4"
+            className="relative flex flex-col h-full w-full items-center justify-center "
             ref={containerRef}
         >
-            <div className="flex size-full w-full flex-col max-w-full min-h-[280px] sm:min-h-[320px] md:min-h-[360px] items-stretch justify-center gap-6 sm:gap-8 md:gap-10">
-                <div className="flex flex-row items-center justify-around gap-2 sm:gap-4">
+            <div className="flex size-full flex-col max-w-full max-h-[200px] items-stretch justify-center gap-10">
+                <div className="flex flex-row items-center justify-around">
                     {/* <motion.div     
                         initial={{
                             x: 225,
@@ -71,7 +73,7 @@ export function SalesforceService() {
                     <SalesforceProducts ref={div3Ref} {...salesforceServicesData.commerceCloud} />
                     {/* </motion.div> */}
                 </div>
-                <div className="flex flex-row items-center justify-between gap-2 sm:gap-4 px-2 sm:px-6 md:px-10">
+                <div className="flex flex-row items-center justify-between">
                     {/* <motion.div ref={div4Ref}
                         initial={{
                             x: 225
@@ -98,7 +100,7 @@ export function SalesforceService() {
                     <SalesforceProducts ref={div6Ref} {...salesforceServicesData.dataCloud} />
                     {/* </motion.div> */}
                 </div>
-                <div className="flex flex-row items-center justify-around gap-2 sm:gap-4">
+                <div className="flex flex-row items-center justify-around">
                     {/* <motion.div ref={div7Ref}
                         initial={{
                             x: 225,
