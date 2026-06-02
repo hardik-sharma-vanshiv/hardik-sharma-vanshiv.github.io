@@ -2,6 +2,7 @@
 
 import FadeIn from "./FadeIn";
 import IconCloud from "./ui/icon-cloud";
+import { Skeleton } from "./ui/Skeleton";
 
 export default function FullStackAndAISection() {
 
@@ -60,8 +61,8 @@ export default function FullStackAndAISection() {
               decision-making, automate repetitive operations, and create better
               customer experiences at scale.
             </p>
-            <div className="mt-8 min-h-[220px] sm:min-h-[260px] rounded-xl border border-dashed border-gray-200 bg-gray-50 flex items-center justify-center text-sm text-gray-400">
-              Add AI animated component here
+            <div className="mt-8 min-h-[220px] sm:min-h-[260px] rounded-xl flex items-center justify-center text-sm text-gray-400">
+              <Skeleton />
             </div>
           </FadeIn>
 

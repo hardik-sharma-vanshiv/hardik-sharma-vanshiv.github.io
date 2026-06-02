@@ -18,9 +18,6 @@ export default function SalesforceCloudsPage() {
         <section className="py-12 md:py-16 px-4 md:px-6">
           <div className="max-w-7xl mx-auto">
             <FadeIn delay={80} direction="up" className="text-center mb-12 md:mb-16">
-              <p className="text-[#A855F7] text-sm font-bold tracking-widest uppercase mb-4">
-                Salesforce Clouds
-              </p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
                 Clouds We Master. So You Don&apos;t Have To.
               </h1>
