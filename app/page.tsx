@@ -1,4 +1,5 @@
 import AboutSection from '@/components/AboutSection';
+import Affiliations from '@/components/Affiliations';
 import DigitalLifecycle from '@/components/DigitalLifecycle';
 import Footer from '@/components/Footer';
 import FullStackAndAISection from '@/components/FullStackAndAISection';
@@ -15,10 +16,10 @@ export default function Home() {
       <main>
         <Hero />
         <Partners />
-        {/* <Affiliations /> */}
         <AboutSection />
         <Offerings />
         <SalesforceSection />
+        <Affiliations />
         <FullStackAndAISection />
         <DigitalLifecycle />
       </main>

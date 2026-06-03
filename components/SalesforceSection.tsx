@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import FadeIn from "./FadeIn";
 import { SalesforceService } from "./SalesforceService";
 
@@ -16,14 +17,15 @@ export function SalesforceSection() {
                             Your Salesforce Partner. <br className="hidden sm:block" />
                             Every Step Forward.
                         </h2>
-                        <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8">
+                        <p className="text-gray-600 text-sm md:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8 font-secondary">
                             Salesforce is a cloud-based customer relationship management (CRM) platform that helps businesses manage their customers, sales, and marketing.
                         </p>
                         <Link
                             href="/salesforce"
-                            className="inline-flex items-center justify-center rounded-lg bg-[#A855F7] hover:bg-[#9333EA] text-white px-8 py-3 text-sm font-semibold transition-colors"
+                            className="inline-flex items-center gap-2 mx-auto lg:mx-0 text-sm font-semibold text-[#A855F7] hover:text-[#9333EA] transition-colors group"
                         >
                             Know More
+                            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                         </Link>
                     </FadeIn>
 

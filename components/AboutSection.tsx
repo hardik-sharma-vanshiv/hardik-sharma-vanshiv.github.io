@@ -12,7 +12,7 @@ export default function AboutSection() {
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
             Your Strategic Partner for Multi-Cloud & Digital Transformation.
           </h2>
-          <div className="space-y-4 text-gray-600 text-sm md:text-base leading-relaxed mb-10 pr-4">
+          <div className="space-y-4 text-gray-600 text-sm md:text-lg leading-relaxed mb-10 pr-4 font-secondary">
             <p>
               We stand distinct in a digital arena saturated with systemic complexities. As a strategic technical advisory firm, we prioritize scalable architectural integrity over generic fixes, specializing in enterprise-grade CRM and Integration solutions.
             </p>

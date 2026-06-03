@@ -34,7 +34,7 @@ export default function Offerings() {
       <div className="max-w-7xl mx-auto px-4">
         <FadeIn delay={100} direction="up">
           <p className="text-[#A855F7] text-sm font-bold tracking-widest uppercase mb-4">
-            OUR CORE EXPERTISE
+            OFFERINGS
           </p>
           <h2 className="text-3xl md:text-3xl font-extrabold text-gray-900 mb-12">
             Advanced Multi-Cloud Technology Solutions
@@ -51,7 +51,7 @@ export default function Offerings() {
                   <Image src={card.image} alt={card.title} width={100} height={100} />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{card.title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
+                <p className="text-base text-gray-500 leading-relaxed font-secondary">
                   {card.desc}
                 </p>
               </div>

@@ -15,7 +15,7 @@ export default function DigitalLifecycle() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6 text-center">
             Mastering the End-to-End Digital Transformation Lifecycle
           </h2>
-          <p className="text-gray-500 mb-8 leading-relaxed max-w-xl text-sm text-center">
+          <p className="text-gray-500 mb-8 leading-relaxed max-w-xl text-lg text-center font-secondary">
             From initial discovery to post-launch optimization, our frameworks ensure your enterprise continually innovates and evolves.
           </p>
         </FadeIn>
@@ -28,7 +28,7 @@ export default function DigitalLifecycle() {
                   {step.num}
                 </span>
                 <h3 className="font-bold text-gray-900 mb-2">{step.title}</h3>
-                <p className="text-gray-500 text-xs leading-relaxed">
+                <p className="text-gray-500 text-sm leading-relaxed font-secondary">
                   {step.desc}
                 </p>
               </div>

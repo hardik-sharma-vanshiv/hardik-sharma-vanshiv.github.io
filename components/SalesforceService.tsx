@@ -1,11 +1,9 @@
 "use client";
-import { motion } from "framer-motion";
-import { useEffect, useRef } from "react";
 import { AnimatedBeam } from "@/components/ui/animated-beam";
-import SalesforceProducts from "./SalesforceProducts"
-import { salesforceServicesData } from "@/data/salesforceServiceData"
 import Ripple from "@/components/ui/ripple";
-import React from "react";
+import { salesforceServicesData } from "@/data/salesforceServiceData";
+import { useEffect, useRef } from "react";
+import SalesforceProducts from "./SalesforceProducts";
 
 export function SalesforceService() {
     const containerRef = useRef<HTMLDivElement>(null);

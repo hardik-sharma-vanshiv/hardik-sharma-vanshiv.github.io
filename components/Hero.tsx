@@ -28,7 +28,7 @@ export default function Hero() {
             />
           </div>
         </h1>
-        <p className="text-center text-xs md:text-base font-normal text-gray-100 max-w-2xl leading-relaxed mt-2">
+        <p className="text-center text-xs md:text-lg font-normal text-gray-100 max-w-2xl leading-relaxed mt-2 font-secondary">
           Driving enterprise digital transformation as your premier Data, AI & CRM Partner. We design scalable, multi-cloud architectures that power tomorrow's industry leaders across 20 countries.
         </p>
       </FadeIn>

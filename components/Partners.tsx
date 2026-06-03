@@ -23,7 +23,7 @@ export default function Partners() {
     <section className="py-16 w-full bg-black">
       <div className="w-full mx-auto px-4">
         <FadeIn delay={100} direction="up"> 
-          <h2 className="text-center text-sm tracking-[0.1em] text-white mb-10">
+          <h2 className="text-center text-lg tracking-[0.1em] text-white mb-10 font-secondary">
           Partnering with Companies That Drive Innovation
           </h2>
         </FadeIn>
