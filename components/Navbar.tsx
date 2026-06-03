@@ -18,6 +18,7 @@ export default function Navbar() {
     { name: 'About', href: '/about', active: pathname === '/about' },
     // { name: 'Customer & Partners', href: '#' },
     // { name: 'Offerings', href: '#' },
+    { name: 'Offerings', href: '#offerings', active: pathname === '/about' },
     { name: 'Accelerator', href: '#' },
     { name: 'Careers', href: '/careers', active: pathname === '/careers' },
     { name: 'Blog', href: '#' },

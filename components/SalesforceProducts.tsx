@@ -11,11 +11,13 @@ const Circle = forwardRef<
             <div
                 ref={ref}
                 className={cn(
-                    "z-10 relative flex size-12 sm:size-16 lg:size-20 opacity-1 uppercase items-center justify-center rounded-full border-2 bg-white p-2 sm:p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,1)]",
+                    "z-10 relative size-12 sm:size-16 lg:size-20 overflow-hidden rounded-full border-2 bg-white shadow-[0_0_20px_-12px_rgba(0,0,0,1)]",
                     className,
                 )}
             >
-                {children}
+                <div className="absolute inset-2 sm:inset-3">
+                    <div className="relative size-full">{children}</div>
+                </div>
             </div>
             <div className={`${textColor} text-white px-1.5 sm:px-2 rounded-full mt-1.5 sm:mt-2 font-extrabold uppercase text-[10px] sm:text-xs`}>
                 {name}
@@ -27,9 +29,6 @@ const Circle = forwardRef<
 Circle.displayName = "Circle";
 
 const SalesforceProducts = forwardRef<any>(({ imgUrl, imgSize, bgColor, borderColor, textColor, tooltipTextColor, side, serviceName, initialX, initialY, finalX, finalY }: any, ref) => {
-
-    // console.log("initialX", serviceName, initialX);
-
     return (
         <>
 
@@ -39,15 +38,14 @@ const SalesforceProducts = forwardRef<any>(({ imgUrl, imgSize, bgColor, borderCo
                 textColor={textColor}
                 className={cn(bgColor, borderColor, imgSize)}
             >
-                {/* {imgUrl && (
+                {imgUrl && (
                     <Image
                         src={imgUrl}
                         alt={serviceName ?? "Salesforce"}
-                        width={80}
-                        height={80}
-                        className="h-full w-full object-contain"
+                        fill
+                        className="object-contain mix-blend-multiply"
                     />
-                )} */}
+                )}
             </Circle>
         </>
     );

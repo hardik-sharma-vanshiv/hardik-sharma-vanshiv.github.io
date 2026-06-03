@@ -30,7 +30,7 @@ export default function Offerings() {
   ];
 
   return (
-    <section className="py-20 bg-[#FAFAFA] w-full">
+    <section className="py-20 bg-[#FAFAFA] w-full" id="offerings">
       <div className="max-w-7xl mx-auto px-4">
         <FadeIn delay={100} direction="up">
           <p className="text-[#A855F7] text-sm font-bold tracking-widest uppercase mb-4">

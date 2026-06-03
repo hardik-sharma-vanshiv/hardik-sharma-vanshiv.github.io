@@ -29,7 +29,7 @@ export default function Hero() {
           </div>
         </h1>
         <p className="text-center text-xs md:text-base font-normal text-gray-100 max-w-2xl leading-relaxed mt-2">
-          Driving enterprise digital transformation as your premier Salesforce and MuleSoft Implementation Partner. We design scalable, multi-cloud architectures that power tomorrow&apos;s industry leaders across the US, Australia, and India.
+          Driving enterprise digital transformation as your premier Data, AI & CRM Partner. We design scalable, multi-cloud architectures that power tomorrow's industry leaders across 20 countries.
         </p>
       </FadeIn>
     </section>
