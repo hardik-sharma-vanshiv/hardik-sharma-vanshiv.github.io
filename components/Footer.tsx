@@ -34,7 +34,10 @@ export default function Footer() {
                 <div>
                   <h4 className="font-bold text-sm mb-1">Global Headquarters</h4>
                   <p className="text-gray-500 text-xs text-balance">
-                    123 Digital Way, Suite 400<br />San Francisco, CA 94105
+                    Vanshiv Technologies Pvt. Ltd.<br />
+                    Plot No. 25 SFS Circle, New Sanganer Road, GP Colony, Mansarovar<br />
+                    Jaipur, Rajasthan,<br />
+                    India - 302020
                   </p>
                 </div>
               </div>
@@ -75,39 +78,42 @@ export default function Footer() {
           </FadeIn>
         </div>
 
-        <FadeIn direction="up" delay={300} className="pt-10 border-t border-gray-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-          <div className="flex flex-col gap-4 mb-4 md:mb-0">
-            <img src="/images/logo2.png" alt="Vanshiv Logo" className="w-42" />
-            <div className="flex flex-row items-start gap-4">
-              <img src="/images/partner8.png" alt="" className="w-32" />
-              <img src="/images/partner11.png" alt="" className="w-32" />
+        <FadeIn direction="up" delay={300} className="pt-10 border-t border-gray-800">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,17rem)_1fr] gap-10 lg:gap-16">
+            <div className="flex flex-col gap-4 min-w-0">
+              <img src="/images/logo2.png" alt="Vanshiv Logo" className="w-42 max-w-full h-auto" />
+              <div className="flex flex-wrap items-center gap-4 max-w-full">
+                <img src="/images/partner8.png" alt="" className="w-28 sm:w-32 max-w-full h-auto object-contain shrink-0" />
+                <img src="/images/partner11.png" alt="" className="w-28 sm:w-32 max-w-full h-auto object-contain shrink-0" />
+              </div>
             </div>
-          </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16 w-full md:w-auto">
-            <div>
-              <h5 className="text-white text-xs font-bold mb-4 uppercase">India</h5>
-              <p className="text-gray-400 text-[10px] leading-relaxed">
-                Vanshiv Technologies Pvt Ltd.<br />
-                Plot No 20, IT Park, Phase 1<br />
-                Chandigarh, India
-              </p>
-            </div>
-            <div>
-              <h5 className="text-white text-xs font-bold mb-4 uppercase">Australia</h5>
-              <p className="text-gray-400 text-[10px] leading-relaxed">
-                Vanshiv Pty Ltd<br />
-                100 Sydney St<br />
-                Sydney, NSW 2000
-              </p>
-            </div>
-            <div>
-              <h5 className="text-white text-xs font-bold mb-4 uppercase">USA</h5>
-              <p className="text-gray-400 text-[10px] leading-relaxed">
-                Vanshiv Inc<br />
-                123 Digital Way<br />
-                San Francisco, CA 94105
-              </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 min-w-0">
+              <div>
+                <h5 className="text-white text-xs font-bold mb-4 uppercase">India</h5>
+                <p className="text-gray-400 text-[10px] leading-relaxed">
+                  Vanshiv Technologies Pvt. Ltd.<br />
+                  Plot No. 25 SFS Circle, New Sanganer Road, GP Colony, Mansarovar<br />
+                  Jaipur, Rajasthan,<br />
+                  India - 302020
+                </p>
+              </div>
+              <div>
+                <h5 className="text-white text-xs font-bold mb-4 uppercase">Australia</h5>
+                <p className="text-gray-400 text-[10px] leading-relaxed">
+                  344 City Road, Southbank<br />
+                  Vic 3006<br />
+                  Australia
+                </p>
+              </div>
+              <div>
+                <h5 className="text-white text-xs font-bold mb-4 uppercase">USA</h5>
+                <p className="text-gray-400 text-[10px] leading-relaxed">
+                  5201 Great America Parkway, Suite 320<br />
+                  Santa Clara, CA 95054<br />
+                  United States
+                </p>
+              </div>
             </div>
           </div>
 
