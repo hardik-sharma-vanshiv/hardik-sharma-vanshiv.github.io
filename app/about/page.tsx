@@ -17,7 +17,7 @@ export default function AboutPage() {
         <section className="bg-[url('/images/aboutBg.jpg')] bg-cover h-screen flex items-center py-20 px-4 border-b border-gray-100">
           <FadeIn delay={100} direction="up" className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight">OUR STORY</h1>
-            <p className="text-lg text-white/90 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-white/90 leading-relaxed max-w-3xl mx-auto font-secondary">
               Vanshiv is a premier digital transformation consultancy specializing in enterprise-grade Salesforce and MuleSoft architectures. We build intelligent, scalable cloud solutions that empower industry leaders to navigate the future.
             </p>
           </FadeIn>

@@ -113,18 +113,18 @@ function AffiliationCard({ item }: { item: Affiliation }) {
             }`}
         >
           <Image
-              src="/images/salesforcelogo.png"
-              alt="Salesforce"
-              width={isFeatured ? 200 : 80}
-              height={isFeatured ? 200 : 28}
-              className={`w-auto object-contain ${isFeatured ? "h-10 sm:h-20" : "h-6 sm:h-10"
-                }`}
-            />
+            src="/images/salesforcelogo.png"
+            alt="Salesforce"
+            width={isFeatured ? 200 : 80}
+            height={isFeatured ? 200 : 28}
+            className={`w-auto object-contain ${isFeatured ? "h-10 sm:h-32" : "h-16 sm:h-24"
+              }`}
+          />
         </div>
 
         <p
-          className={`relative font-bold uppercase leading-snug tracking-wide ${isFeatured
-            ? "max-w-[240px] text-sm sm:text-xl"
+          className={`relative font-extrabold uppercase leading-snug tracking-wide ${isFeatured
+            ? "max-w-[260px] text-sm sm:text-2xl"
             : "max-w-[200px] text-[10px] sm:text-xs"
             }`}
         >

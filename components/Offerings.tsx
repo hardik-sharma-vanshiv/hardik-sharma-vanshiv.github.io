@@ -10,7 +10,7 @@ export default function Offerings() {
       image: '/images/salesforcelogo.png'
     },
     {
-      title: 'MuleSoft Integration & Development',
+      title: 'Integration & Development',
       desc: 'Unlock seamless data flow and process automation with scalable API-led connectivity, modernizing your enterprise infrastructure securely.',
       colSpan: 'col-span-1 md:col-span-1',
       image: '/images/mulesoft.png'

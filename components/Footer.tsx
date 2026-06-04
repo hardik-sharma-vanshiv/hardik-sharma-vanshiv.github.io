@@ -12,7 +12,7 @@ export default function Footer() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Contact Vanshiv Team
             </h2>
-            <p className="text-gray-400 text-sm max-w-sm mb-10">
+            <p className="text-gray-400 text-base max-w-sm mb-10 font-secondary">
               Ready to start your digital transformation? Reach out to the architecture team across our global channels.
             </p>
 
@@ -23,7 +23,7 @@ export default function Footer() {
                 </svg>
                 <div>
                   <h4 className="font-bold text-sm mb-1">Email Us</h4>
-                  <p className="text-gray-500 text-xs">contact@vanshiv.com</p>
+                  <p className="text-gray-500 text-sm font-secondary">contact@vanshiv.com</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -33,10 +33,10 @@ export default function Footer() {
                 </svg>
                 <div>
                   <h4 className="font-bold text-sm mb-1">Global Headquarters</h4>
-                  <p className="text-gray-500 text-xs text-balance">
+                  <p className="text-gray-500 text-sm text-balance font-secondary">
                     Vanshiv Technologies Pvt. Ltd.<br />
-                    Plot No. 25 SFS Circle, New Sanganer Road, GP Colony, Mansarovar<br />
-                    Jaipur, Rajasthan,<br />
+                    Plot No. 25 SFS Circle, New Sanganer Road, GP Colony<br />
+                    Mansarovar,Jaipur, Rajasthan,<br />
                     India - 302020
                   </p>
                 </div>
@@ -91,7 +91,7 @@ export default function Footer() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 min-w-0">
               <div>
                 <h5 className="text-white text-xs font-bold mb-4 uppercase">India</h5>
-                <p className="text-gray-400 text-[10px] leading-relaxed">
+                <p className="text-gray-400 text-[12px] leading-relaxed font-secondary">
                   Vanshiv Technologies Pvt. Ltd.<br />
                   Plot No. 25 SFS Circle, New Sanganer Road, GP Colony, Mansarovar<br />
                   Jaipur, Rajasthan,<br />
@@ -100,7 +100,7 @@ export default function Footer() {
               </div>
               <div>
                 <h5 className="text-white text-xs font-bold mb-4 uppercase">Australia</h5>
-                <p className="text-gray-400 text-[10px] leading-relaxed">
+                <p className="text-gray-400 text-[12px] leading-relaxed font-secondary">
                   344 City Road, Southbank<br />
                   Vic 3006<br />
                   Australia
@@ -108,7 +108,7 @@ export default function Footer() {
               </div>
               <div>
                 <h5 className="text-white text-xs font-bold mb-4 uppercase">USA</h5>
-                <p className="text-gray-400 text-[10px] leading-relaxed">
+                <p className="text-gray-400 text-[12px] leading-relaxed font-secondary">
                   5201 Great America Parkway, Suite 320<br />
                   Santa Clara, CA 95054<br />
                   United States
