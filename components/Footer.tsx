@@ -1,4 +1,5 @@
 import FadeIn from './FadeIn';
+import ContactForm from './ContactForm';
 
 export default function Footer() {
   return (
@@ -46,35 +47,7 @@ export default function Footer() {
 
           <FadeIn direction="up" delay={200} className="flex-1 bg-[#1A1A1A] rounded-xl p-8 border border-white/5 relative">
             <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 blur-[50px] rounded-full"></div>
-            <form className="space-y-6 relative z-10">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-[10px] uppercase text-gray-500 mb-2 tracking-wider">First Name</label>
-                  <input type="text" className="w-full bg-transparent border-b border-gray-700 py-2 text-sm text-gray-300 focus:outline-none focus:border-purple-500 transition-colors" placeholder="John" />
-                </div>
-                <div>
-                  <label className="block text-[10px] uppercase text-gray-500 mb-2 tracking-wider">Last Name</label>
-                  <input type="text" className="w-full bg-transparent border-b border-gray-700 py-2 text-sm text-gray-300 focus:outline-none focus:border-purple-500 transition-colors" placeholder="Doe" />
-                </div>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-[10px] uppercase text-gray-500 mb-2 tracking-wider">Email Address</label>
-                  <input type="email" className="w-full bg-transparent border-b border-gray-700 py-2 text-sm text-gray-300 focus:outline-none focus:border-purple-500 transition-colors" placeholder="john@example.com" />
-                </div>
-                <div>
-                  <label className="block text-[10px] uppercase text-gray-500 mb-2 tracking-wider">Phone</label>
-                  <input type="tel" className="w-full bg-transparent border-b border-gray-700 py-2 text-sm text-gray-300 focus:outline-none focus:border-purple-500 transition-colors" placeholder="+1 (555) 000-0000" />
-                </div>
-              </div>
-              <div>
-                <label className="block text-[10px] uppercase text-gray-500 mb-2 tracking-wider">Message</label>
-                <textarea rows={3} className="w-full bg-transparent border-b border-gray-700 py-2 text-sm text-gray-300 focus:outline-none focus:border-purple-500 transition-colors resize-none" placeholder="Tell us about your project..."></textarea>
-              </div>
-              <button type="button" className="w-full bg-purple-500 to-fuchsia-400 text-white font-bold py-4 rounded-lg shadow-lg hover:shadow-purple-500/25 transition-all outline-none">
-                Send Message
-              </button>
-            </form>
+            <ContactForm />
           </FadeIn>
         </div>
 

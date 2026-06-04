@@ -113,7 +113,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center">
-          <a href="#contact" className={`${isScrolledPastHero ? 'bg-black' : 'bg-white'} ${isScrolledPastHero ? 'text-white' : 'text-black'} px-4 py-1  hover:bg-white text-black text-sm font-bold rounded-lg transition-colors`}>
+          <a href="#contact" className={`${isScrolledPastHero ? 'bg-black' : 'bg-white'} ${isScrolledPastHero ? 'text-white' : 'text-black'} px-4 py-2 text-black text-sm font-bold rounded-lg transition-colors`}>
             Contact Us
           </a>
         </div>

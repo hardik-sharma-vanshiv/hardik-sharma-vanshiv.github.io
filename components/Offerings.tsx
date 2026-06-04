@@ -1,62 +1,70 @@
-import FadeIn from './FadeIn';
-import Image from 'next/image';
+import FadeIn from "./FadeIn";
+import {
+  coreExpertiseOfferings,
+  OFFERING_ICON_BG_CLASS,
+  OFFERING_ICON_CLASS,
+} from "@/data/offeringsData";
 
 export default function Offerings() {
-  const cards = [
-    {
-      title: 'Salesforce Implementation & Consulting',
-      desc: 'Seamless deployment, customization, and optimization of Salesforce CRM solutions tailored to streamline your business workflows and maximize ROI.',
-      colSpan: 'col-span-1 md:col-span-2',
-      image: '/images/salesforcelogo.png'
-    },
-    {
-      title: 'Integration & Development',
-      desc: 'Unlock seamless data flow and process automation with scalable API-led connectivity, modernizing your enterprise infrastructure securely.',
-      colSpan: 'col-span-1 md:col-span-1',
-      image: '/images/mulesoft.png'
-    },
-    {
-      title: 'Legacy System Modernization',
-      desc: 'Translating outdated, siloed architectures into agile, cloud-native infrastructures that reduce technical debt and lower operational costs.',
-      colSpan: 'col-span-1 md:col-span-1',
-      image: '/images/legacy-system.png'
-    },
-    {
-      title: 'Digital Strategy & Advisory Services',
-      desc: 'Strategic IT consultation, cloud readiness assessments, and roadmap creation to align your complex technology initiatives with overarching business goals.',
-      colSpan: 'col-span-1 md:col-span-2',
-      image: '/images/digital-strategy.png'
-    }
-  ];
-
   return (
-    <section className="py-20 bg-[#FAFAFA] w-full" id="offerings">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="w-full bg-[#FAFAFA] py-20" id="offerings">
+      <div className="mx-auto max-w-7xl px-4 md:px-6">
         <FadeIn delay={100} direction="up">
-          <p className="text-[#A855F7] text-sm font-bold tracking-widest uppercase mb-4">
-            OFFERINGS
+          <p className="mb-4 text-sm font-bold tracking-widest text-[#A855F7] uppercase">
+            Offerings
           </p>
-          <h2 className="text-3xl md:text-3xl font-extrabold text-gray-900 mb-12">
-            Advanced Multi-Cloud Technology Solutions
-          </h2>
+          <div className="mb-4 flex items-center gap-3">
+            <h2 className="text-2xl leading-tight font-extrabold text-gray-900 sm:text-3xl md:text-4xl">
+              Core Expertise & Services
+            </h2>
+          </div>
+          <p className="mb-10 max-w-3xl text-sm text-gray-600 md:mb-12 md:text-base font-secondary">
+            Advanced multi-cloud technology solutions across Salesforce clouds,
+            commerce, public sector, marketing, integration, and enterprise
+            architecture.
+          </p>
         </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {cards.map((card, idx) => (
-            <FadeIn key={idx} delay={idx * 100} direction="up" className={card.colSpan}>
-              <div
-                className={`bg-white rounded-xl p-8 border border-black/10 transition-shadow flex flex-col h-full`}
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:auto-rows-fr">
+          {coreExpertiseOfferings.map((item, idx) => {
+            const Icon = item.icon;
+            return (
+              <FadeIn
+                key={item.id}
+                delay={120 + idx * 80}
+                direction="up"
+                className={`h-full ${item.gridClass}`}
               >
-                <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-6 text-white shrink-0">
-                  <Image src={card.image} alt={card.title} width={100} height={100} />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">{card.title}</h3>
-                <p className="text-base text-gray-500 leading-relaxed font-secondary">
-                  {card.desc}
-                </p>
-              </div>
-            </FadeIn>
-          ))}
+                <article className="flex h-full min-h-[200px] flex-col rounded-xl border border-black/10 bg-white p-6 sm:p-8">
+                  <div
+                    className={`mb-5 flex h-12 w-12 shrink-0 items-center justify-center rounded-lg ${OFFERING_ICON_BG_CLASS} ${OFFERING_ICON_CLASS}`}
+                  >
+                    <Icon className="h-6 w-6" aria-hidden />
+                  </div>
+                  <h3 className="mb-3 text-lg font-bold text-gray-900">
+                    {item.title}
+                  </h3>
+                  <p className="mb-4 text-sm leading-relaxed text-gray-600 sm:text-base font-secondary">
+                    {item.description}
+                  </p>
+                  <ul className="mt-auto space-y-2 border-t border-gray-100 pt-4">
+                    {item.highlights.map((point) => (
+                      <li
+                        key={point}
+                        className="flex items-start gap-2 text-sm text-gray-500 font-secondary"
+                      >
+                        <span
+                          className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#A855F7]"
+                          aria-hidden
+                        />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              </FadeIn>
+            );
+          })}
         </div>
       </div>
     </section>

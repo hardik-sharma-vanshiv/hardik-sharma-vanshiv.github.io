@@ -53,7 +53,7 @@ export const salesforceServicesData: any = {
   },
   "salesforce" : {
     "imgUrl": "/images/salesforcelogo.png",
-    "imgSize":"size-28 lg:size-40",
+    "imgSize":"size-28 lg:size-28",
     "bgColor":"bg-blue-100",
     "borderColor":"border-blue-200",
     "tooltipTextColor": "text-blue-800",
