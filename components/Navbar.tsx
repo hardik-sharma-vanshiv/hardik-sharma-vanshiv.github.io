@@ -14,13 +14,25 @@ export default function Navbar() {
 
   const pathname = usePathname();
 
+  const LIGHT_NAVBAR_ROUTES = [
+    '/techelevate',
+    '/terms-and-conditions',
+    '/privacy-policy',
+    '/salesforce',
+  ];
+
+  const isLightNavbar =
+    LIGHT_NAVBAR_ROUTES.some(
+      (route) => pathname === route || pathname.startsWith(`${route}/`)
+    ) || isScrolledPastHero;
+
   const links = [
     // { name: 'Home', href: '/', active: pathname === '/' },
     { name: 'About', href: '/about', active: pathname === '/about' },
     // { name: 'Customer & Partners', href: '#' },
     // { name: 'Offerings', href: '#' },
     { name: 'Offerings', href: '#offerings', active: pathname === '#offerings' },
-    { name: 'Accelerator', href: '#' },
+    { name: 'Accelerators', href: '#' },
     { name: 'Careers', href: '/careers', active: pathname === '/careers' },
     // { name: 'Blog', href: '#' },
   ];
@@ -53,22 +65,22 @@ export default function Navbar() {
   }, [prevOffset])
 
   return (
-    <nav className={`h-20 flex flex-row items-center justify-between md:justify-around fixed ${visible ? 'top-[0px]' : 'top-0'} w-screen z-40 py-2 transition-all duration-300 ${visible ? "translate-y-0" : "-translate-y-full"} ${isScrolledPastHero ? "bg-white/90 backdrop-blur-md" : "bg-black lg:bg-black/0 lg:backdrop-filter lg:backdrop-blur-lg"}`}>
+    <nav className={`h-20 flex flex-row items-center justify-between md:justify-around fixed ${visible ? 'top-[0px]' : 'top-0'} w-screen z-40 py-2 transition-all duration-300 ${visible ? "translate-y-0" : "-translate-y-full"} ${isLightNavbar ? "bg-white/90 backdrop-blur-md" : "bg-black lg:bg-black/0 lg:backdrop-filter lg:backdrop-blur-lg"}`}>
       <div className="flex items-center gap-2">
         {/* Placeholder for Logo */}
         <Link href="/" className="flex items-center">
-          <img src={isScrolledPastHero ? "/images/logo1.png" : "/images/logo2.png"} alt="Vanshiv Logo" className="w-auto h-10" />
+          <img src={isLightNavbar ? "/images/logo1.png" : "/images/logo2.png"} alt="Vanshiv Logo" className="w-auto h-10" />
         </Link>
       </div>
 
       <div className="flex items-center gap-4">
         <div className="hidden md:flex items-center gap-6">
           {links.map((link) => {
-            if (link.name === 'Accelerator') {
+            if (link.name === 'Accelerators') {
               return (
                 <div key={link.name} className="relative group py-2">
                   <button
-                    className={`relative flex items-center gap-1 text-sm font-medium transition-all ${isScrolledPastHero ? 'text-gray-600' : 'text-white'} after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:-bottom-1 after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left`}
+                    className={`relative flex items-center gap-1 text-sm font-medium transition-all ${isLightNavbar ? 'text-gray-600' : 'text-white'} after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:-bottom-1 after:left-0 ${isLightNavbar ? 'after:bg-gray-900' : 'after:bg-white'} after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left`}
                   >
                     {link.name}
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
@@ -87,7 +99,7 @@ export default function Navbar() {
               return (
                 <div key={link.name} className="relative group py-2">
                   <button
-                    className={`relative flex items-center gap-1 text-sm font-medium transition-all ${isScrolledPastHero ? 'text-gray-600' : 'text-white'} after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:-bottom-1 after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left`}
+                    className={`relative flex items-center gap-1 text-sm font-medium transition-all ${isLightNavbar ? 'text-gray-600' : 'text-white'} after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:-bottom-1 after:left-0 ${isLightNavbar ? 'after:bg-gray-900' : 'after:bg-white'} after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left`}
                   >
                     {link.name}
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
@@ -103,8 +115,8 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className={`relative text-sm font-medium transition-all ${isScrolledPastHero ? (link.active ? 'text-gray-900' : 'text-gray-600') : 'text-white'
-                  } ${link.active ? 'after:scale-x-100 after:origin-bottom-left' : 'after:scale-x-0'} after:content-[''] after:absolute after:w-full after:h-[2px] after:-bottom-1 after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left`}
+                className={`relative text-sm font-medium transition-all ${isLightNavbar ? (link.active ? 'text-gray-900' : 'text-gray-600') : 'text-white'
+                  } ${link.active ? 'after:scale-x-100 after:origin-bottom-left' : 'after:scale-x-0'} after:content-[''] after:absolute after:w-full after:h-[2px] after:-bottom-1 after:left-0 ${isLightNavbar ? 'after:bg-gray-900' : 'after:bg-white'} after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left`}
               >
                 {link.name}
               </a>
@@ -113,7 +125,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center">
-          <a href="#contact" className={`${isScrolledPastHero ? 'bg-black' : 'bg-white'} ${isScrolledPastHero ? 'text-white' : 'text-black'} px-4 py-2 text-black text-sm font-bold rounded-lg transition-colors`}>
+          <a href="#contact" className={`${isLightNavbar ? 'bg-black text-white' : 'bg-white text-black'} px-4 py-2 text-sm font-bold rounded-lg transition-colors`}>
             Contact Us
           </a>
         </div>
@@ -122,7 +134,7 @@ export default function Navbar() {
 
       {/* Hamburger Menu Toggle */}
       <div className="md:hidden flex items-center">
-        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className={`p-2 focus:outline-none ${isScrolledPastHero ? 'text-gray-900' : 'text-white'}`}>
+        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className={`p-2 focus:outline-none ${isLightNavbar ? 'text-gray-900' : 'text-white'}`}>
           {isMobileMenuOpen ? (
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
           ) : (

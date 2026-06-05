@@ -141,7 +141,7 @@ export function ApplicationModal({
         <Dialog open={isOpen} onOpenChange={onClose}>
             <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
                 <DialogHeader>
-                    <DialogTitle className="text-2xl font-bold text-foreground">
+                    <DialogTitle className="text-2xl font-bold text-black">
                         Apply for {job.title}
                     </DialogTitle>
                 </DialogHeader>
@@ -149,10 +149,10 @@ export function ApplicationModal({
                 {submitStatus === "success" ? (
                     <div className="text-center py-8">
                         <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
-                        <h3 className="text-xl font-semibold text-foreground mb-2">
+                        <h3 className="text-xl font-semibold text-black mb-2">
                             Application Submitted!
                         </h3>
-                        <p className="text-muted-foreground">
+                        <p className="text-black">
                             Thank you for your interest. We'll review your application and get
                             back to you soon.
                         </p>
@@ -168,7 +168,7 @@ export function ApplicationModal({
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="space-y-2">
-                                <Label htmlFor="name">Full Name *</Label>
+                                <Label htmlFor="name" className="text-black">Full Name *</Label>
                                 <Input
                                     id="name"
                                     type="text"
@@ -176,11 +176,12 @@ export function ApplicationModal({
                                     onChange={(e) => handleInputChange("name", e.target.value)}
                                     placeholder="Enter your full name"
                                     required
+                                    className="text-black bg-white border-black/30"
                                 />
                             </div>
 
                             <div className="space-y-2">
-                                <Label htmlFor="email">Email Address *</Label>
+                                <Label htmlFor="email" className="text-black">Email Address *</Label>
                                 <Input
                                     id="email"
                                     type="email"
@@ -188,12 +189,13 @@ export function ApplicationModal({
                                     onChange={(e) => handleInputChange("email", e.target.value)}
                                     placeholder="Enter your email"
                                     required
+                                    className="text-black bg-white border-black/30"
                                 />
                             </div>
                         </div>
 
                         <div className="space-y-2">
-                            <Label htmlFor="phone">Phone Number *</Label>
+                            <Label htmlFor="phone" className="text-black">Phone Number *</Label>
                             <Input
                                 id="phone"
                                 type="tel"
@@ -201,18 +203,19 @@ export function ApplicationModal({
                                 onChange={(e) => handleInputChange("phone", e.target.value)}
                                 placeholder="Enter your phone number"
                                 required
+                                className="text-black bg-white border-black/30"
                             />
                         </div>
 
                         <div className="space-y-2">
-                            <Label htmlFor="resume">Resume *</Label>
-                            <div className="border-2 border-dashed border-border rounded-lg p-6 text-center">
+                            <Label htmlFor="resume" className="text-black">Resume *</Label>
+                            <div className="border-2 border-dashed border-black/30 rounded-lg p-2 text-center">
                                 {resume ? (
-                                    <div className="flex items-center justify-between bg-muted rounded-lg p-3">
+                                    <div className="flex items-center justify-between bg-black/10 rounded-lg p-3">
                                         <div className="flex items-center gap-2">
-                                            <Upload className="h-4 w-4 text-muted-foreground" />
-                                            <span className="text-sm font-medium">{resume.name}</span>
-                                            <span className="text-xs text-muted-foreground">
+                                            <Upload className="h-4 w-4 text-black" />
+                                            <span className="text-sm font-medium text-black">{resume.name}</span>
+                                            <span className="text-xs text-black">
                                                 ({(resume.size / 1024 / 1024).toFixed(1)} MB)
                                             </span>
                                         </div>
@@ -221,15 +224,15 @@ export function ApplicationModal({
                                             variant="ghost"
                                             size="sm"
                                             onClick={removeFile}
-                                            className="h-8 w-8 p-0"
+                                            className="h-8 w-8 p-0 text-black border border-black/30 rounded-sm"
                                         >
                                             <X className="h-4 w-4" />
                                         </Button>
                                     </div>
                                 ) : (
                                     <div>
-                                        <Upload className="h-8 w-8 text-muted-foreground mx-auto mb-2" />
-                                        <p className="text-sm text-muted-foreground mb-2">
+                                        <Upload className="h-8 w-8 text-black mx-auto mb-2" />
+                                        <p className="text-sm text-black mb-2">
                                             Upload your resume (PDF, DOC, DOCX - Max 5MB)
                                         </p>
                                         <Input
@@ -241,7 +244,7 @@ export function ApplicationModal({
                                         />
                                         <Label
                                             htmlFor="resume-upload"
-                                            className="cursor-pointer inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+                                            className="cursor-pointer inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-primary-black hover:bg-primary/90 h-10 px-4 py-2"
                                         >
                                             Choose File
                                         </Label>
@@ -265,15 +268,14 @@ export function ApplicationModal({
                             <Button
                                 type="submit"
                                 size="lg"
-                                className="flex-1"
+                                className="flex-1 bg-black hover:bg-primary/90 text-primary-foreground"
                                 disabled={isSubmitting}
                             >
                                 {isSubmitting ? "Submitting..." : "Submit Application"}
                             </Button>
                             <Button
                                 type="button"
-                                variant="outline"
-                                size="lg"
+                                className="border text-black"
                                 onClick={onClose}
                                 disabled={isSubmitting}
                             >

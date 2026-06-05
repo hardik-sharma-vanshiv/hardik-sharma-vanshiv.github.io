@@ -195,13 +195,13 @@ export default function Careers() {
           </div>
 
           {/* Filter tabs */}
-          <div className="flex flex-wrap gap-3 justify-center mb-12">
+          {/* <div className="flex flex-wrap gap-3 justify-center mb-12">
             <button onClick={() => filterJobs('all')} className={`px-5 py-2 rounded-full text-sm font-semibold transition-colors ${activeTab === 'all' ? 'bg-[#ff5542] text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}>All</button>
             <button onClick={() => filterJobs('engineering')} className={`px-5 py-2 rounded-full text-sm font-semibold transition-colors ${activeTab === 'engineering' ? 'bg-[#ff5542] text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}>Engineering</button>
             <button onClick={() => filterJobs('ai')} className={`px-5 py-2 rounded-full text-sm font-semibold transition-colors ${activeTab === 'ai' ? 'bg-[#ff5542] text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}>AI & Data</button>
             <button onClick={() => filterJobs('consulting')} className={`px-5 py-2 rounded-full text-sm font-semibold transition-colors ${activeTab === 'consulting' ? 'bg-[#ff5542] text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}>Consulting</button>
             <button onClick={() => filterJobs('sales')} className={`px-5 py-2 rounded-full text-sm font-semibold transition-colors ${activeTab === 'sales' ? 'bg-[#ff5542] text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}>Sales</button>
-          </div>
+          </div> */}
 
           {error && (
             <div className="text-center py-12">

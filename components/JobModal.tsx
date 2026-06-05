@@ -57,14 +57,14 @@ export function JobModal({ job, isOpen, onClose }: JobModalProps) {
         <>
             <Dialog open={isOpen} onOpenChange={onClose}>
                 <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-                    <DialogHeader className="flex flex-row justify-start">
-                        <DialogTitle className="text-2xl font-bold text-black pr-3">{job.title}</DialogTitle>
-                        <div className="flex gap-2 text-black">
-                            <Badge variant="secondary">{job.type}</Badge>
+                    <DialogHeader className="flex flex-col gap-2 justify-start">
+                        <div className="flex flex-row gap-4 justify-start">
+                            <DialogTitle className="text-2xl font-bold text-black">{job.title}</DialogTitle>
+                            <div className="flex gap-2 text-black border border-black/30 rounded-full p-0.5">
+                                <Badge variant="secondary">{job.type}</Badge>
+                            </div>
                         </div>
-                    </DialogHeader>
 
-                    <div className="space-y-6">
                         {/* Job Meta Info */}
                         <div className="flex flex-wrap gap-4 text-sm text-black">
                             <div className="flex items-center gap-1">
@@ -98,6 +98,10 @@ export function JobModal({ job, isOpen, onClose }: JobModalProps) {
                         </div>
 
                         <Separator />
+                    </DialogHeader>
+
+                    <div className="space-y-6">
+
 
                         {/* Job Description */}
                         {/* <div>
@@ -163,8 +167,8 @@ export function JobModal({ job, isOpen, onClose }: JobModalProps) {
                                 Apply Now
                             </Button>
                             <Button size="lg"
-                            className="border text-black"
-                            onClick={onClose}>
+                                className="border text-black"
+                                onClick={onClose}>
                                 Close
                             </Button>
                         </div>
